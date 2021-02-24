@@ -1,0 +1,2 @@
+name="rhodesworkers"
+template="tool"

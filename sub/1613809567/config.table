@@ -1,17 +1,187 @@
 {
+  ["toolbar"]	= {
+      ["搜索框提示"]	= "搜索PRTS" ;
+      ["menus"]	= {
+          [2]	= {
+              ["onClick"]	= "退出程序()\
+退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          [1]	= {
+              ["onClick"]	= "进入子页面(\"home\")\
+退出页面()" ;
+              ["name"]	= "首页" ;
+              } ;
+          } ;
+      ["输入栏模式"]	= false ;
+      ["搜索URL"]	= "http://prts.wiki/index.php?search=%s" ;
+      ["icon_btns"]	= {
+          } ;
+      ["启用搜索功能"]	= true ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["支持滑动页面"]	= false ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= true ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["remove_element"]	= "header" ;
+          ["js"]	= "" ;
+          ["url"]	= "prts.wiki" ;
+          } ;
+      } ;
+  ["view_attribute"]	= {
+      ["顶栏标题"]	= "PRTS" ;
+      ["顶栏高度"]	= "55dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "175dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      } ;
+  ["colors"]	= {
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["进度条"]	= "#ffee4866" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      } ;
+  ["sidebar"]	= {
+      ["启用"]	= true ;
+      ["items"]	= {
+          [1]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%A6%96%E9%A1%B5\")" ;
+              ["name"]	= "首页" ;
+              ["icon"]	= "drawable/home.png" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "干员档案" ;
+              ["icon"]	= "drawable/account_multiple.png" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%95%8C%E4%BA%BA%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "敌人档案" ;
+              ["icon"]	= "drawable/skull.png" ;
+              } ;
+          [4]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%85%B3%E5%8D%A1%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "关卡资料" ;
+              ["icon"]	= "drawable/map.png" ;
+              } ;
+          [5]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B4%BB%E5%8A%A8%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "活动记录" ;
+              ["icon"]	= "drawable/flag_checkered.png" ;
+              } ;
+          [6]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%AE%B6%E5%85%B7%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "家具记录" ;
+              ["icon"]	= "drawable/sofa, couch, interior.png" ;
+              } ;
+          [7]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%90%8E%E5%8B%A4%E6%8A%80%E8%83%BD%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "后勤技能" ;
+              ["icon"]	= "drawable/screwdriver.png" ;
+              } ;
+          [8]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%81%93%E5%85%B7%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "道具一览" ;
+              ["icon"]	= "drawable/cube_outline.png" ;
+              } ;
+          [9]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%8D%A1%E6%B1%A0%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "卡池记录" ;
+              ["icon"]	= "drawable/credit_card.png" ;
+              } ;
+          [10]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%87%87%E8%B4%AD%E4%B8%AD%E5%BF%83\")" ;
+              ["name"]	= "采购中心" ;
+              ["icon"]	= "drawable/cart_outline.png" ;
+              } ;
+          [11]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8\")" ;
+              ["name"]	= "任务列表" ;
+              ["icon"]	= "drawable/clipboard_text.png" ;
+              } ;
+          [12]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80\")" ;
+              ["name"]	= "游戏数据基础" ;
+              ["icon"]	= "drawable/data.png" ;
+              } ;
+          [13]	= {
+              ["onClick"]	= "" ;
+              ["name"]	= "泰拉大典" ;
+              ["icon"]	= "drawable/book-open-page-variant.png" ;
+              } ;
+          [14]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%9F%B3%E4%B9%90%E9%89%B4%E8%B5%8F\")" ;
+              ["name"]	= "音乐鉴赏" ;
+              ["icon"]	= "drawable/music_note.png" ;
+              } ;
+          [15]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%A3%B0%E4%BC%98%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "配音一览" ;
+              ["icon"]	= "drawable/microphone.png" ;
+              } ;
+          [16]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E7%94%BB%E5%B8%88%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "画师一览" ;
+              ["icon"]	= "drawable/pen.png" ;
+              } ;
+          [17]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%89%A7%E6%83%85%E4%B8%80%E8%A7%88\")" ;
+              ["name"]	= "剧情一览" ;
+              ["icon"]	= "drawable/movie.png" ;
+              } ;
+          [18]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9%E5%89%8D%E7%9E%BB\")" ;
+              ["name"]	= "游戏内容前瞻" ;
+              ["icon"]	= "drawable/eye.png" ;
+              } ;
+          [19]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%9B%86%E6%88%90%E6%88%98%E7%95%A5\")" ;
+              ["name"]	= "集成战略" ;
+              ["icon"]	= "drawable/google_circles_extended.png" ;
+              } ;
+          [20]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%8D%B1%E6%9C%BA%E5%90%88%E7%BA%A6\")" ;
+              ["name"]	= "危机合约" ;
+              ["icon"]	= "drawable/vpn.png" ;
+              } ;
+          [21]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E9%A6%96%E9%A1%B5\")" ;
+              ["name"]	= "登录" ;
+              ["icon"]	= "drawable/login.png" ;
+              } ;
+          [22]	= {
+              ["onClick"]	= "加载网页(\"http://prts.wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%A7%BB%E5%8A%A8%E7%89%88%E9%80%89%E9%A1%B9&returnto=%E9%A6%96%E9%A1%B5\")" ;
+              ["name"]	= "设置" ;
+              ["icon"]	= "drawable/cog.png" ;
+              } ;
+          } ;
+      ["启用顶部图片"]	= false ;
+      } ;
+  ["fltBtn"]	= {
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      } ;
   ["events"]	= {
       ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
 \
 --接收参数\
 浏览器对象，新标题=..." ;
-      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
       ["程序启动"]	= "import 'android.webkit.WebView'\
 webView.addJavascriptInterface({},'JsInterface')\
 function CircleButton(view,InsideColor,radiu)\
@@ -30,191 +200,21 @@ flt=sidebar.getLayoutParams( )\
 flt.setMargins(0, 95, 0, 0)--调整第二个，以调整高度位置，数越大，位置越下/调整第四个，以调整侧滑栏高度\
 sidebar.setLayoutParams(flt)\
 " ;
-      } ;
-  ["colors"]	= {
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["顶栏"]	= "#ff101f30" ;
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["进度条"]	= "#ffee4866" ;
-      ["悬浮按钮"]	= "#ff33a7aa" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      } ;
-  ["sidebar"]	= {
-      ["启用"]	= true ;
-      ["items"]	= {
-          [1]	= {
-              ["name"]	= "首页" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%A6%96%E9%A1%B5\")" ;
-              ["icon"]	= "drawable/home.png" ;
-              } ;
-          [2]	= {
-              ["name"]	= "干员档案" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/account_multiple.png" ;
-              } ;
-          [3]	= {
-              ["name"]	= "敌人档案" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%95%8C%E4%BA%BA%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/skull.png" ;
-              } ;
-          [4]	= {
-              ["name"]	= "关卡资料" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%85%B3%E5%8D%A1%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/map.png" ;
-              } ;
-          [5]	= {
-              ["name"]	= "活动记录" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B4%BB%E5%8A%A8%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/flag_checkered.png" ;
-              } ;
-          [6]	= {
-              ["name"]	= "家具记录" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%AE%B6%E5%85%B7%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/sofa, couch, interior.png" ;
-              } ;
-          [7]	= {
-              ["name"]	= "后勤技能" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%90%8E%E5%8B%A4%E6%8A%80%E8%83%BD%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/screwdriver.png" ;
-              } ;
-          [8]	= {
-              ["name"]	= "道具一览" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%81%93%E5%85%B7%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/cube_outline.png" ;
-              } ;
-          [9]	= {
-              ["name"]	= "卡池记录" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%8D%A1%E6%B1%A0%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/credit_card.png" ;
-              } ;
-          [10]	= {
-              ["name"]	= "采购中心" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%87%87%E8%B4%AD%E4%B8%AD%E5%BF%83\")" ;
-              ["icon"]	= "drawable/cart_outline.png" ;
-              } ;
-          [11]	= {
-              ["name"]	= "任务列表" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8\")" ;
-              ["icon"]	= "drawable/clipboard_text.png" ;
-              } ;
-          [12]	= {
-              ["name"]	= "游戏数据基础" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80\")" ;
-              ["icon"]	= "drawable/data.png" ;
-              } ;
-          [13]	= {
-              ["name"]	= "泰拉大典" ;
-              ["onClick"]	= "" ;
-              ["icon"]	= "drawable/book-open-page-variant.png" ;
-              } ;
-          [14]	= {
-              ["name"]	= "音乐鉴赏" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%9F%B3%E4%B9%90%E9%89%B4%E8%B5%8F\")" ;
-              ["icon"]	= "drawable/music_note.png" ;
-              } ;
-          [15]	= {
-              ["name"]	= "配音一览" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%A3%B0%E4%BC%98%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/microphone.png" ;
-              } ;
-          [16]	= {
-              ["name"]	= "画师一览" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E7%94%BB%E5%B8%88%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/pen.png" ;
-              } ;
-          [17]	= {
-              ["name"]	= "剧情一览" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%89%A7%E6%83%85%E4%B8%80%E8%A7%88\")" ;
-              ["icon"]	= "drawable/movie.png" ;
-              } ;
-          [18]	= {
-              ["name"]	= "游戏内容前瞻" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E6%B8%B8%E6%88%8F%E5%86%85%E5%AE%B9%E5%89%8D%E7%9E%BB\")" ;
-              ["icon"]	= "drawable/eye.png" ;
-              } ;
-          [19]	= {
-              ["name"]	= "集成战略" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E9%9B%86%E6%88%90%E6%88%98%E7%95%A5\")" ;
-              ["icon"]	= "drawable/google_circles_extended.png" ;
-              } ;
-          [20]	= {
-              ["name"]	= "危机合约" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/w/%E5%8D%B1%E6%9C%BA%E5%90%88%E7%BA%A6\")" ;
-              ["icon"]	= "drawable/vpn.png" ;
-              } ;
-          [21]	= {
-              ["name"]	= "登录" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&returnto=%E9%A6%96%E9%A1%B5\")" ;
-              ["icon"]	= "drawable/login.png" ;
-              } ;
-          [22]	= {
-              ["name"]	= "设置" ;
-              ["onClick"]	= "加载网页(\"http://prts.wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E7%A7%BB%E5%8A%A8%E7%89%88%E9%80%89%E9%A1%B9&returnto=%E9%A6%96%E9%A1%B5\")" ;
-              ["icon"]	= "drawable/cog.png" ;
-              } ;
-          } ;
-      ["启用顶部图片"]	= false ;
-      } ;
-  ["switch"]	= {
-      ["支持滑动页面"]	= false ;
-      ["横屏"]	= false ;
-      ["显示状态栏"]	= true ;
-      ["启用启动图"]	= false ;
-      } ;
-  ["fltBtn"]	= {
-      ["显示"]	= false ;
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
-      ["图标"]	= "" ;
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
       } ;
   ["web"]	= {
-      ["浏览器用户标识"]	= "默认" ;
-      ["启用长按菜单"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["启动网页"]	= "http://prts.wiki/w/%E9%A6%96%E9%A1%B5" ;
-      ["支持打开外部应用"]	= true ;
       ["启用进度条"]	= true ;
-      } ;
-  ["web_control"]	= {
-      [1]	= {
-          ["url"]	= "prts.wiki" ;
-          ["remove_element"]	= "header" ;
-          ["js"]	= "" ;
-          } ;
-      } ;
-  ["toolbar"]	= {
-      ["搜索URL"]	= "http://prts.wiki/index.php?search=%s" ;
-      ["menus"]	= {
-          [2]	= {
-              ["name"]	= "退出" ;
-              ["onClick"]	= "退出程序()\
-退出页面()" ;
-              } ;
-          [1]	= {
-              ["name"]	= "首页" ;
-              ["onClick"]	= "进入子页面(\"home\")\
-退出页面()" ;
-              } ;
-          } ;
-      ["搜索框提示"]	= "搜索PRTS" ;
-      ["输入栏模式"]	= false ;
-      ["启用搜索功能"]	= true ;
-      ["icon_btns"]	= {
-          } ;
-      } ;
-  ["view_attribute"]	= {
-      ["顶栏高度"]	= "55dp" ;
-      ["侧滑栏宽度"]	= "175dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏标题"]	= "PRTS" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["启动网页"]	= "http://prts.wiki/w/%E9%A6%96%E9%A1%B5" ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
+      ["启用长按菜单"]	= true ;
+      ["支持打开外部应用"]	= true ;
       } ;
   } ;

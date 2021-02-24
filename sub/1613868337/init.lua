@@ -1,2 +1,2 @@
-name="gachasalt"
 template="tool"
+name="gachasalt"
