@@ -1,0 +1,150 @@
+{
+  ["colors"]	= {
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["进度条"]	= "#ffee4866" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      } ;
+  ["switch"]	= {
+      ["支持滑动页面"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["横屏"]	= false ;
+      ["启用启动图"]	= false ;
+      } ;
+  ["view_attribute"]	= {
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "215dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["顶栏标题"]	= "Kokodayo" ;
+      ["顶栏高度"]	= "55dp" ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["items"]	= {
+          [1]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"route-item is-short\")[1].click();]])" ;
+              ["name"]	= "干员数据" ;
+              ["icon"]	= "drawable/account_search.png" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[2].click();]])" ;
+              ["name"]	= "关卡数据／敌人数据" ;
+              ["icon"]	= "drawable/map.png" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[3].click();]])" ;
+              ["name"]	= "基建技能" ;
+              ["icon"]	= "drawable/white_balance_irradescent.png" ;
+              } ;
+          [4]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[4].click();]])" ;
+              ["name"]	= "材料图鉴" ;
+              ["icon"]	= "drawable/cube_outline.png" ;
+              } ;
+          [5]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[5].click();]])" ;
+              ["name"]	= "时装一览" ;
+              ["icon"]	= "drawable/tshirt_crew.png" ;
+              } ;
+          [6]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[6].click();]])" ;
+              ["name"]	= "家具图鉴" ;
+              ["icon"]	= "drawable/account_multiple_outline.png" ;
+              } ;
+          [7]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"router-more\")[0].click();]])\
+加载Js([[document.getElementsByClassName(\"route-item is-short\")[7].click();]])" ;
+              ["name"]	= "经验计算" ;
+              ["icon"]	= "drawable/calculator.png" ;
+              } ;
+          } ;
+      ["启用"]	= true ;
+      } ;
+  ["web"]	= {
+      ["启动网页"]	= "https://kokodayo.fun" ;
+      ["网页沉浸"]	= false ;
+      ["支持打开外部应用"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启用进度条"]	= true ;
+      } ;
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "import 'android.webkit.WebView'\
+webView.addJavascriptInterface({},'JsInterface')\
+function CircleButton(view,InsideColor,radiu)\
+import \"android.graphics.drawable.GradientDrawable\"\
+drawable = GradientDrawable()\
+drawable.setShape(GradientDrawable.RECTANGLE)\
+drawable.setColor(InsideColor)\
+drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});\
+view.setBackgroundDrawable(drawable)\
+end\
+角度=35\
+控件id=sidebar\
+控件颜色=0xFFFFFFFF\
+CircleButton(控件id,控件颜色,角度)\
+flt=sidebar.getLayoutParams( )\
+flt.setMargins(0, 95, 0, 1140)--调整第二个，以调整高度位置，数越大，位置越下/调整第四个，以调整侧滑栏高度\
+sidebar.setLayoutParams(flt)" ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      } ;
+  ["fltBtn"]	= {
+      ["图标"]	= "" ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["显示"]	= false ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["remove_element"]	= "el-circle-icon,link-mode-short" ;
+          ["url"]	= "kokodayo.fun" ;
+          ["js"]	= "" ;
+          } ;
+      } ;
+  ["toolbar"]	= {
+      ["menus"]	= {
+          [2]	= {
+              ["onClick"]	= "退出程序()\
+退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          [1]	= {
+              ["onClick"]	= "进入子页面(\"home\")\
+退出页面()" ;
+              ["name"]	= "首页" ;
+              } ;
+          } ;
+      ["搜索URL"]	= "" ;
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["搜索框提示"]	= "" ;
+      ["icon_btns"]	= {
+          } ;
+      } ;
+  } ;

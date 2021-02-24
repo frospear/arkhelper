@@ -1,0 +1,2 @@
+name="gachasalt"
+template="tool"

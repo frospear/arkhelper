@@ -1,0 +1,2 @@
+name="penguinstats"
+template="tool"

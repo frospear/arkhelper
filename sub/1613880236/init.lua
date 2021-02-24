@@ -1,0 +1,2 @@
+name="akonegraph"
+template="tool"

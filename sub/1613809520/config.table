@@ -1,0 +1,572 @@
+{
+  ["colors"]	= {
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["进度条"]	= "#00000000" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      } ;
+  ["web_control"]	= {
+      } ;
+  ["view_attribute"]	= {
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏高度"]	= "55dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["顶栏标题"]	= "Arkhelper" ;
+      } ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      } ;
+  ["toolbar"]	= {
+      ["搜索URL"]	= "" ;
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["menus"]	= {
+          [2]	= {
+              ["onClick"]	= "对话框()\
+.设置标题(\"清除缓存\")\
+.设置消息(\"此功能将清除所有缓存及网站数据，请自行备份PenguinID、PRTS账户等重要数据\")\
+.设置积极按钮(\"确定\",function()\
+  os.execute('pm clear '..activity.getPackageName())\
+end)\
+.设置消极按钮(\"取消\")\
+.显示()" ;
+              ["name"]	= "清理缓存" ;
+              } ;
+          [1]	= {
+              ["onClick"]	= "进入子页面(\"about\")" ;
+              ["name"]	= "关于" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "" ;
+      ["icon_btns"]	= {
+          [1]	= {
+              ["onClick"]	= "退出程序()\
+退出页面()" ;
+              ["icon"]	= "exit_to_app" ;
+              } ;
+          } ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= false ;
+      ["items"]	= {
+          } ;
+      } ;
+  ["web"]	= {
+      ["启动网页"]	= "" ;
+      ["网页沉浸"]	= false ;
+      ["支持打开外部应用"]	= true ;
+      ["启用进度条"]	= false ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启用长按菜单"]	= false ;
+      } ;
+  ["switch"]	= {
+      ["支持滑动页面"]	= false ;
+      ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["启用启动图"]	= false ;
+      } ;
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "homepage=\
+{\
+  LinearLayout;\
+  orientation=\"vertical\";\
+  layout_height=\"fill\";\
+  layout_width=\"fill\";\
+  BackgroundColor=\"#FFFFFF\";\
+  {\
+    ScrollView,--纵向滚动\
+    layout_width='fill';--宽\
+    layout_height='fill';--高\
+    {\
+      LinearLayout;\
+      orientation=\"horizontal\";\
+      Elevation=\"300dp\";\
+      layout_width=\"fill\";\
+      layout_height=\"100%h\";\
+      {\
+        LinearLayout;\
+        orientation=\"vertical\";\
+        layout_width=\"48%w\";\
+        layout_height=\"fill\";\
+        layout_marginLeft=\"2%w\";\
+        --第一列\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFFFFFFF\";\
+          radius=\"5dp\";\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"prts\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"PRTS\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"kokodayo\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"Kokodayo\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"gachasalt\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"AKTool\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"amiya\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"罗德岛人事\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"gatherlmd\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"凑龙门币\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"arkplanner\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"Arkplanner\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"houdou\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"干员培养表\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        --第二列\
+      };\
+      {\
+        LinearLayout;\
+        orientation=\"vertical\";\
+        layout_width=\"48%w\";\
+        layout_height=\"fill\";\
+        layout_marginRight=\"2%w\";\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFFFFFFF\";\
+          radius=\"5dp\";\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"penguinstats\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"Penguin Statistics\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"dulihr\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"人力资源部\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"akonegraph\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"素材一图流\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"aktools\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"明日方舟工具箱\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"plotreplay\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"剧情回放\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"akdata\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"Arknights DPS\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+        {\
+          CardView;\
+          layout_gravity=\"center\";\
+          layout_marginTop=\"2%h\";\
+          elevation=\"0dp\";\
+          layout_width=\"45%w\";\
+          layout_height=\"45dp\";\
+          cardBackgroundColor=\"#FFF7F7F7\";\
+          radius=\"5dp\";\
+          {\
+            LinearLayout;\
+            layout_margin=\"0dp\";\
+            layout_width=\"fill\";\
+            layout_height=\"fill\";\
+            gravity=\"center\";\
+            id=\"opssr\";\
+            {\
+              TextView;\
+              textSize=\"14sp\";\
+              text=\"源石作战室\",\
+              textColor=\"#333333\";\
+            };\
+          };\
+        },\
+      };\
+    };\
+  };\
+};\
+webView.addView(loadlayout(homepage))\
+--项目点击事件\
+prts.onClick=function()\
+  进入子页面(\"prts\")\
+  退出页面()\
+end\
+penguinstats.onClick=function()\
+  进入子页面(\"penguinstats\")\
+  退出页面()\
+end\
+gachasalt.onClick=function()\
+  进入子页面(\"gachasalt\")\
+  退出页面()\
+end\
+dulihr.onClick=function()\
+  进入子页面(\"dulihr\")\
+  退出页面()\
+end\
+kokodayo.onClick=function()\
+  进入子页面(\"kokodayo\")\
+  退出页面()\
+end\
+akonegraph.onClick=function()\
+  进入子页面(\"akonegraph\")\
+  退出页面()\
+end\
+amiya.onClick=function()\
+  进入子页面(\"amiya\")\
+  退出页面()\
+end\
+aktools.onClick=function()\
+  进入子页面(\"aktools\")\
+  退出页面()\
+end\
+gatherlmd.onClick=function()\
+  进入子页面(\"gatherlmd\")\
+  退出页面()\
+end\
+arkplanner.onClick=function()\
+  进入子页面(\"arkplanner\")\
+  退出页面()\
+end\
+plotreplay.onClick=function()\
+  进入子页面(\"plotreplay\")\
+  退出页面()\
+end\
+akdata.onClick=function()\
+  进入子页面(\"akdata\")\
+  退出页面()\
+end\
+houdou.onClick=function()\
+  进入子页面(\"houdou\")\
+  退出页面()\
+end\
+opssr.onClick=function()\
+  进入子页面(\"opssr\")\
+  退出页面()\
+end\
+\
+function 波纹(id,颜色)\
+  import \"android.content.res.ColorStateList\"\
+  local attrsArray = {android.R.attr.selectableItemBackgroundBorderless}\
+  local typedArray =activity.obtainStyledAttributes(attrsArray)\
+  ripple=typedArray.getResourceId(0,0)\
+  Pretend=activity.Resources.getDrawable(ripple)\
+  Pretend.setColor(ColorStateList(int[0].class{int{}},int{颜色}))\
+  id.setBackground(Pretend.setColor(ColorStateList(int[0].class{int{}},int{颜色})))\
+end\
+\
+波纹(prts,0xFF888888)\
+波纹(penguinstats,0xFF888888)\
+波纹(kokodayo,0xFF888888)\
+波纹(dulihr,0xFF888888)\
+波纹(gachasalt,0xFF888888)\
+波纹(akonegraph,0xFF888888)\
+波纹(amiya,0xFF888888)\
+波纹(aktools,0xFF888888)\
+波纹(gatherlmd,0xFF888888)\
+波纹(arkplanner,0xFF888888)\
+波纹(plotreplay,0xFF888888)\
+波纹(akdata,0xFF888888)\
+波纹(houdou,0xFF888888)\
+波纹(opssr,0xFF888888)" ;
+      } ;
+  } ;

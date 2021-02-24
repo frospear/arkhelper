@@ -1,0 +1,399 @@
+{
+  ["toolbar"]	= {
+      ["输入栏模式"]	= true ;
+      ["icon_btns"]	= {
+          } ;
+      ["搜索URL"]	= "" ;
+      ["启用搜索功能"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "" ;
+      } ;
+  ["events"]	= {
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "layout={\
+  LinearLayout;\
+  orientation=\"vertical\";\
+  layout_width=\"fill\";\
+  layout_height=\"fill\";\
+  id=\"main\",\
+  {\
+    RelativeLayout;\
+    layout_width=\"fill\";\
+    layout_height=\"140dp\";\
+    gravity=\"left\";\
+    id=\"toolbar\",\
+    {\
+      ImageButton;\
+      layout_width=\"45dp\";\
+      style=\"?android:attr/buttonBarButtonStyle\";\
+      layout_centerVertical=\"true\";\
+      padding=\"10dp\";\
+      id=\"back\";\
+      layout_marginLeft=\"10dp\";\
+      paddingRight=\"2dp\";\
+      layout_marginRight=\"12dp\";\
+      layout_height=\"45dp\";\
+      paddingLeft=\"2dp\";\
+      src=\"back.png\";\
+      background=\"#FFFAFAFA\";\
+      colorFilter=\"#FF000000\";\
+    };\
+  };\
+  {\
+    LinearLayout;\
+    layout_width=\"fill\";\
+    layout_height=\"fill\";\
+    Orientation=\"vertical\";\
+    {\
+      CardView;\
+      layout_width=\"fill\";\
+      id=\"card1\";\
+      layout_height=\"150dp\";\
+      layout_marginTop=\"10dp\";\
+      background=\"#ffffffff\";\
+      layout_marginLeft=\"10dp\";\
+      layout_marginRight=\"10dp\";\
+      layout_marginBottom=\"10dp\";\
+      {\
+        LinearLayout;\
+        layout_width=\"fill\";\
+        layout_height=\"fill\";\
+        Orientation=\"vertical\";\
+        {\
+          TextView;\
+          layout_width=\"100dp\";\
+          layout_height=\"40dp\";\
+          gravity=\"center\";\
+          text=\"关于作者\";\
+          textColor=\"#FF000000\";\
+          textSize=\"18dp\";\
+        };\
+        {\
+          LinearLayout;\
+          id=\"kaifazhe\";\
+          layout_width=\"fill\";\
+          gravity=\"center|left\";\
+          orientation=\"horizontal\";\
+          {\
+            ImageView;\
+            layout_width=\"30dp\";\
+            layout_margin=\"10dp\";\
+            layout_height=\"30dp\";\
+            src=\"oblisetta.png\";\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            layout_marginLeft=\"10dp\";\
+            layout_marginRight=\"10dp\";\
+            orientation=\"vertical\";\
+            {\
+              TextView;\
+              text=\"nga@Oblisetta\";\
+              textColor=\"#FF363636\";\
+              textSize=\"15sp\";\
+            };\
+            {\
+              TextView;\
+              text=\"一条咸鱼\";\
+              textColor=\"#FF363636\";\
+              textSize=\"12sp\";\
+            };\
+          };\
+        };\
+        {\
+          LinearLayout;\
+          id=\"log\";\
+          layout_width=\"fill\";\
+          gravity=\"center|left\";\
+          orientation=\"horizontal\";\
+          {\
+            ImageView;\
+            layout_width=\"30dp\";\
+            layout_margin=\"10dp\";\
+            layout_height=\"30dp\";\
+            src=\"frospear.png\";\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            layout_marginLeft=\"10dp\";\
+            layout_marginRight=\"10dp\";\
+            orientation=\"vertical\";\
+            {\
+              TextView;\
+              text=\"酷安@frospear_冻梨\";\
+              textColor=\"#FF363636\";\
+              textSize=\"15sp\";\
+            };\
+            {\
+              TextView;\
+              text=\"偶尔冒头\";\
+              textColor=\"#FF363636\";\
+              textSize=\"12sp\";\
+            };\
+          };\
+        };\
+      };\
+    };\
+    {\
+      CardView;\
+      layout_width=\"fill\";\
+      id=\"card2\";\
+      layout_height=\"250dp\";\
+      layout_marginTop=\"10dp\";\
+      background=\"#ffffffff\";\
+      layout_marginLeft=\"10dp\";\
+      layout_marginRight=\"10dp\";\
+      layout_marginBottom=\"10dp\";\
+      {\
+        ScrollView;\
+        background=\"#00ffffff\";\
+        layout_width=\"fill\";\
+        layout_height=\"fill\";\
+        {\
+          LinearLayout;\
+          layout_width=\"fill\";\
+          layout_height=\"fill\";\
+          Orientation=\"vertical\";\
+          {\
+            TextView;\
+            layout_width=\"70dp\";\
+            layout_height=\"40dp\";\
+            gravity=\"center\";\
+            text=\"感谢\";\
+            textColor=\"#FF000000\";\
+            textSize=\"18dp\";\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            gravity=\"center|left\";\
+            orientation=\"horizontal\";\
+            {\
+              ImageView;\
+              layout_width=\"30dp\";\
+              layout_margin=\"10dp\";\
+              layout_height=\"30dp\";\
+              src=\"fusion.png\";\
+            };\
+            {\
+              LinearLayout;\
+              layout_width=\"fill\";\
+              layout_marginLeft=\"10dp\";\
+              layout_marginRight=\"10dp\";\
+              orientation=\"vertical\";\
+              {\
+                TextView;\
+                text=\"酷安@寒歌\";\
+                textColor=\"#FF363636\";\
+                textSize=\"15sp\";\
+              };\
+              {\
+                TextView;\
+                text=\"本应用基于fusion编译\";\
+                textColor=\"#FF363636\";\
+                textSize=\"12sp\";\
+              };\
+            };\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            gravity=\"center|left\";\
+            orientation=\"horizontal\";\
+            {\
+              ImageView;\
+              layout_width=\"30dp\";\
+              layout_margin=\"10dp\";\
+              layout_height=\"30dp\";\
+              src=\"icon.png\";\
+            };\
+            {\
+              LinearLayout;\
+              layout_width=\"fill\";\
+              layout_marginLeft=\"10dp\";\
+              layout_marginRight=\"10dp\";\
+              orientation=\"vertical\";\
+              {\
+                TextView;\
+                text=\"酷安@paradoxxx\";\
+                textColor=\"#FF363636\";\
+                textSize=\"15sp\";\
+              };\
+              {\
+                TextView;\
+                text=\"图标来自谷雨图标包，已获得原作者授权\";\
+                textColor=\"#FF363636\";\
+                textSize=\"12sp\";\
+              };\
+            };\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            gravity=\"center|left\";\
+            orientation=\"horizontal\";\
+            {\
+              ImageView;\
+              layout_width=\"30dp\";\
+              layout_margin=\"10dp\";\
+              layout_height=\"30dp\";\
+              src=\"default.png\";\
+            };\
+            {\
+              LinearLayout;\
+              layout_width=\"fill\";\
+              layout_marginLeft=\"10dp\";\
+              layout_marginRight=\"10dp\";\
+              orientation=\"vertical\";\
+              {\
+                TextView;\
+                text=\"各工具站作者及贡献者\";\
+\
+                textColor=\"#FF363636\";\
+                textSize=\"15sp\";\
+              };\
+              {\
+                TextView;\
+                text=\"感谢你们的努力和支持\";\
+                textColor=\"#FF363636\";\
+                textSize=\"12sp\";\
+              };\
+            };\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            gravity=\"center|left\";\
+            orientation=\"horizontal\";\
+            {\
+              ImageView;\
+              layout_width=\"30dp\";\
+              layout_margin=\"10dp\";\
+              layout_height=\"30dp\";\
+              src=\"others.png\";\
+            };\
+            {\
+              LinearLayout;\
+              layout_width=\"fill\";\
+              layout_marginLeft=\"10dp\";\
+              layout_marginRight=\"10dp\";\
+              orientation=\"vertical\";\
+              {\
+                TextView;\
+                text=\"其他为本应用提供直接或间接帮助的人\";\
+\
+                textColor=\"#FF363636\";\
+                textSize=\"15sp\";\
+              };\
+              {\
+                TextView;\
+                text=\"各教程、开源项目作者及工具开发者\";\
+                textColor=\"#FF363636\";\
+                textSize=\"12sp\";\
+              };\
+            };\
+          };\
+        };\
+      };\
+    };\
+  };\
+};\
+activity.setContentView(loadlayout(layout))\
+back.onClick=function()\
+  退出页面()\
+end\
+function CircleButton(view,InsideColor,radiu)\
+  import \"android.graphics.drawable.GradientDrawable\"\
+  drawable = GradientDrawable() \
+  drawable.setShape(GradientDrawable.RECTANGLE) \
+  drawable.setColor(InsideColor)\
+  drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});\
+  view.setBackgroundDrawable(drawable)\
+end\
+角度=30\
+控件id=card1\
+控件颜色=0xffffffff\
+CircleButton(控件id,控件颜色,角度)\
+function CircleButton(view,InsideColor,radiu)\
+  import \"android.graphics.drawable.GradientDrawable\"\
+  drawable = GradientDrawable() \
+  drawable.setShape(GradientDrawable.RECTANGLE) \
+  drawable.setColor(InsideColor)\
+  drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});\
+  view.setBackgroundDrawable(drawable)\
+end\
+角度=30\
+控件id=card2\
+控件颜色=0xffffffff\
+CircleButton(控件id,控件颜色,角度)" ;
+      } ;
+  ["web"]	= {
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
+      ["启用进度条"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["启动网页"]	= "" ;
+      } ;
+  ["view_attribute"]	= {
+      ["顶栏标题"]	= "Title" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏高度"]	= "56dp" ;
+      } ;
+  ["fltBtn"]	= {
+      ["图标"]	= "" ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["显示"]	= true ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["支持滑动页面"]	= true ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= true ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= true ;
+      ["items"]	= {
+          } ;
+      } ;
+  ["web_control"]	= {
+      } ;
+  ["colors"]	= {
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["进度条"]	= "#00000000" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["顶栏"]	= "#ff2c2e43" ;
+      } ;
+  } ;

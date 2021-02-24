@@ -1,0 +1,2 @@
+name="kokodayo"
+template="tool"

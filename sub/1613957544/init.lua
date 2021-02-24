@@ -1,0 +1,2 @@
+name="devinfo"
+template="tool"
