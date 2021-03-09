@@ -1,2 +1,2 @@
-name="rhodesworkers"
 template="tool"
+name="rhodesworkers"

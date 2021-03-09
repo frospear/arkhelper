@@ -1,5 +1,5 @@
+template="tool"
 appname="Arkhelper"
-appver="0.2.3"
 packagename="com.oblisetta.arkhelper"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
@@ -9,7 +9,7 @@ user_permission={
   [5]	= "INTERNET" ;
   [6]	= "WRITE_EXTERNAL_STORAGE" ;
   } ;
-template="tool"
-appcode="210224"
+appcode="210309"
+appver="0.2.6"
 
 --require "import" import"loadlayout" import"loadmenu" import"loadbitmap" 

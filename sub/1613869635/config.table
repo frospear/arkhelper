@@ -1,96 +1,100 @@
 {
-  ["colors"]	= {
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["悬浮按钮"]	= "#ff33a7aa" ;
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["进度条"]	= "#ffee4866" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["顶栏"]	= "#ff101f30" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["items"]	= {
+          } ;
+      ["启用"]	= true ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= false ;
       } ;
   ["web_control"]	= {
       [1]	= {
-          ["url"]	= "www.bigfun.cn" ;
-          ["remove_element"]	= "mdc-toolbar mdc-toolbar--flexible-space-maximized" ;
           ["js"]	= "document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[5].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[6].setAttribute(\"style\",\"display:none\");" ;
+          ["remove_element"]	= "mdc-toolbar mdc-toolbar--flexible-space-maximized" ;
+          ["url"]	= "www.bigfun.cn" ;
           } ;
+      } ;
+  ["web"]	= {
+      ["浏览器用户标识"]	= "默认" ;
+      ["支持打开外部应用"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["启动网页"]	= "https://www.bigfun.cn/tools/aktools/" ;
+      ["网页沉浸"]	= false ;
+      ["启用进度条"]	= true ;
+      } ;
+  ["fltBtn"]	= {
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      } ;
+  ["toolbar"]	= {
+      ["搜索框提示"]	= "" ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "刷新网页()" ;
+              ["name"]	= "刷新" ;
+              } ;
+          [2]	= {
+              ["name"]	= "设置" ;
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[3].click();]])" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "退出程序()\
+退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          } ;
+      ["输入栏模式"]	= true ;
+      ["icon_btns"]	= {
+          [2]	= {
+              ["icon"]	= "theme_light_dark" ;
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[1].click();]])" ;
+              } ;
+          [1]	= {
+              ["icon"]	= "home" ;
+              ["onClick"]	= "进入子页面(\"home\")\
+退出页面()" ;
+              } ;
+          } ;
+      ["搜索URL"]	= "" ;
+      ["启用搜索功能"]	= false ;
+      } ;
+  ["colors"]	= {
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["进度条"]	= "#ffee4866" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
       } ;
   ["view_attribute"]	= {
       ["搜索栏阴影强度"]	= "2dp" ;
       ["顶栏高度"]	= "55dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
       ["搜索栏圆角弧度"]	= "2dp" ;
       ["侧滑栏宽度"]	= "0dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
       ["顶栏标题"]	= "明日方舟工具箱" ;
       } ;
   ["events"]	= {
+      ["网页加载完毕"]	= "" ;
+      ["网页即将加载"]	= "" ;
       ["收到新标题"]	= "" ;
       ["程序启动"]	= "import 'android.webkit.WebView'\
 webView.addJavascriptInterface({},'JsInterface')\
 menuBtn.onClick=function()\
   加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[0].click();]])\
 end" ;
-      ["网页即将加载"]	= "" ;
-      ["网页加载完毕"]	= "" ;
-      } ;
-  ["fltBtn"]	= {
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
-      ["图标"]	= "" ;
-      ["显示"]	= false ;
-      } ;
-  ["toolbar"]	= {
-      ["icon_btns"]	= {
-          [2]	= {
-              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[3].click();]])" ;
-              ["icon"]	= "cog" ;
-              } ;
-          [1]	= {
-              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[1].click();]])" ;
-              ["icon"]	= "theme_light_dark" ;
-              } ;
-          } ;
-      ["搜索框提示"]	= "" ;
-      ["启用搜索功能"]	= false ;
-      ["搜索URL"]	= "" ;
-      ["输入栏模式"]	= true ;
-      ["menus"]	= {
-          [2]	= {
-              ["name"]	= "退出" ;
-              ["onClick"]	= "退出程序()\
-退出页面()" ;
-              } ;
-          [1]	= {
-              ["name"]	= "首页" ;
-              ["onClick"]	= "进入子页面(\"home\")\
-退出页面()" ;
-              } ;
-          } ;
-      } ;
-  ["web"]	= {
-      ["启用进度条"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["浏览器用户标识"]	= "默认" ;
-      ["启动网页"]	= "https://www.bigfun.cn/tools/aktools/" ;
-      ["启用长按菜单"]	= true ;
-      ["支持打开外部应用"]	= true ;
-      } ;
-  ["sidebar"]	= {
-      ["items"]	= {
-          } ;
-      ["启用顶部图片"]	= false ;
-      ["启用"]	= true ;
-      } ;
-  ["switch"]	= {
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= false ;
-      ["显示状态栏"]	= true ;
-      ["启用启动图"]	= false ;
       } ;
   } ;
