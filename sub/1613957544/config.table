@@ -1,64 +1,76 @@
 {
-  ["toolbar"]	= {
-      ["输入栏模式"]	= true ;
-      ["icon_btns"]	= {
-          } ;
-      ["menus"]	= {
-          [1]	= {
-              ["onClick"]	= "退出页面()" ;
-              ["name"]	= "退出" ;
-              } ;
-          } ;
-      ["搜索URL"]	= "" ;
-      ["启用搜索功能"]	= false ;
-      ["搜索框提示"]	= "" ;
-      } ;
-  ["fltBtn"]	= {
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
-      ["显示"]	= true ;
-      ["图标"]	= "" ;
-      } ;
-  ["web"]	= {
-      ["启用长按菜单"]	= true ;
-      ["启动网页"]	= "" ;
-      ["启用进度条"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["支持打开外部应用"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      } ;
-  ["sidebar"]	= {
-      ["启用"]	= true ;
-      ["启用顶部图片"]	= false ;
-      ["items"]	= {
-          } ;
-      } ;
-  ["colors"]	= {
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["进度条"]	= "#00000000" ;
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["顶栏"]	= "#ff2c2e43" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["悬浮按钮"]	= "#ff33a7aa" ;
-      } ;
   ["switch"]	= {
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= true ;
       ["启用启动图"]	= false ;
       ["显示状态栏"]	= true ;
+      ["支持滑动页面"]	= true ;
+      ["横屏"]	= false ;
+      } ;
+  ["colors"]	= {
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["进度条"]	= "#00000000" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff2c2e43" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      } ;
+  ["fltBtn"]	= {
+      ["显示"]	= true ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["图标"]	= "" ;
+      } ;
+  ["view_attribute"]	= {
+      ["侧滑栏宽度"]	= "0dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏标题"]	= "Title" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["顶栏高度"]	= "56dp" ;
+      } ;
+  ["web_control"]	= {
+      } ;
+  ["toolbar"]	= {
+      ["icon_btns"]	= {
+          } ;
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["name"]	= "退出" ;
+              ["onClick"]	= "退出页面()" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "" ;
+      ["搜索URL"]	= "" ;
+      } ;
+  ["web"]	= {
+      ["启动网页"]	= "" ;
+      ["启用长按菜单"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["网页沉浸"]	= false ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启用进度条"]	= true ;
       } ;
   ["events"]	= {
       ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
       ["程序启动"]	= "layout={\
   LinearLayout;\
   orientation=\"vertical\";\
@@ -97,7 +109,7 @@
       CardView;\
       layout_width=\"fill\";\
       id=\"card1\";\
-      layout_height=\"150dp\";\
+      layout_height=\"200dp\";\
       layout_marginTop=\"10dp\";\
       background=\"#ffffffff\";\
       layout_marginLeft=\"10dp\";\
@@ -178,6 +190,39 @@
             {\
               TextView;\
               text=\"偶尔冒头\";\
+              textColor=\"#FF363636\";\
+              textSize=\"12sp\";\
+            };\
+          };\
+        };\
+        {\
+          LinearLayout;\
+          id=\"github\";\
+          layout_width=\"fill\";\
+          gravity=\"center|left\";\
+          orientation=\"horizontal\";\
+          {\
+            ImageView;\
+            layout_width=\"30dp\";\
+            layout_margin=\"10dp\";\
+            layout_height=\"30dp\";\
+            src=\"frospirum.png\";\
+          };\
+          {\
+            LinearLayout;\
+            layout_width=\"fill\";\
+            layout_marginLeft=\"10dp\";\
+            layout_marginRight=\"10dp\";\
+            orientation=\"vertical\";\
+            {\
+              TextView;\
+              text=\"Github@frospirum\";\
+              textColor=\"#FF363636\";\
+              textSize=\"15sp\";\
+            };\
+            {\
+              TextView;\
+              text=\"https://frospirum.github.io/arkhelper\";\
               textColor=\"#FF363636\";\
               textSize=\"12sp\";\
             };\
@@ -377,23 +422,11 @@ end\
 控件id=card2\
 控件颜色=0xffffffff\
 CircleButton(控件id,控件颜色,角度)" ;
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象，新标题=..." ;
-      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
       } ;
-  ["view_attribute"]	= {
-      ["顶栏高度"]	= "56dp" ;
-      ["顶栏标题"]	= "Title" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["侧滑栏宽度"]	= "0dp" ;
-      } ;
-  ["web_control"]	= {
+  ["sidebar"]	= {
+      ["items"]	= {
+          } ;
+      ["启用"]	= true ;
+      ["启用顶部图片"]	= false ;
       } ;
   } ;

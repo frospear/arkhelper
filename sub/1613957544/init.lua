@@ -1,2 +1,2 @@
-name="devinfo"
 template="tool"
+name="devinfo"

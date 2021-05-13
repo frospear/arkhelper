@@ -1,2 +1,2 @@
-name="penguinstats"
 template="tool"
+name="penguinstats"

@@ -1,2 +1,2 @@
-name="pageinfo"
 template="tool"
+name="pageinfo"
