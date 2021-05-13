@@ -1,8 +1,14 @@
 ## About
 
-nothing......
+Didn't write anything because i can't think of it......
 
 ## Release Notes
+
+### v0.3.1
+
+- Remove invalid website.
+- New tool site included.
+- ptimize the display effect of some pages.
 
 ### v0.2.6
 - Changed the logic of some pages.
