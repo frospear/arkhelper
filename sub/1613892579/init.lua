@@ -1,2 +1,2 @@
-template="tool"
 name="amiya"
+template="tool"
