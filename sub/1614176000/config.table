@@ -1,106 +1,114 @@
 {
-  ["toolbar"]	= {
-      ["启用搜索功能"]	= false ;
-      ["搜索URL"]	= "" ;
-      ["输入栏模式"]	= true ;
-      ["menus"]	= {
-          [2]	= {
-              ["name"]	= "退出" ;
-              ["onClick"]	= "退出程序()\
-退出页面()" ;
-              } ;
-          [1]	= {
-              ["name"]	= "刷新" ;
-              ["onClick"]	= "刷新网页()" ;
-              } ;
+  ["colors"]	= {
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["进度条"]	= "#ffee4866" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      } ;
+  ["web"]	= {
+      ["启用进度条"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启动网页"]	= "https://rhodesworkers.ltd" ;
+      ["网页沉浸"]	= false ;
+      ["启用长按菜单"]	= true ;
+      } ;
+  ["sidebar"]	= {
+      ["启用"]	= true ;
+      ["items"]	= {
           } ;
-      ["icon_btns"]	= {
-          [1]	= {
-              ["onClick"]	= "进入子页面(\"home\")\
-退出页面()" ;
-              ["icon"]	= "home" ;
-              } ;
-          } ;
-      ["搜索框提示"]	= "" ;
-      } ;
-  ["view_attribute"]	= {
-      ["顶栏标题"]	= "ArkStory" ;
-      ["侧滑栏宽度"]	= "0dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏高度"]	= "55dp" ;
-      } ;
-  ["fltBtn"]	= {
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
-      ["显示"]	= false ;
-      ["图标"]	= "" ;
-      } ;
-  ["switch"]	= {
-      ["显示状态栏"]	= true ;
-      ["启用启动图"]	= false ;
-      ["支持滑动页面"]	= false ;
-      ["横屏"]	= false ;
+      ["启用顶部图片"]	= false ;
       } ;
   ["web_control"]	= {
       [2]	= {
           ["remove_element"]	= "header" ;
-          ["js"]	= "" ;
           ["url"]	= "prts.wiki" ;
+          ["js"]	= "" ;
           } ;
       [1]	= {
           ["remove_element"]	= "topbar-main" ;
-          ["js"]	= "" ;
           ["url"]	= "rhodesworkers.ltd" ;
+          ["js"]	= "" ;
           } ;
       } ;
-  ["colors"]	= {
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
-      ["顶栏"]	= "#ff101f30" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["悬浮按钮"]	= "#ff33a7aa" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["进度条"]	= "#ffee4866" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      } ;
-  ["web"]	= {
-      ["支持打开外部应用"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["启用长按菜单"]	= true ;
-      ["启动网页"]	= "https://rhodesworkers.ltd" ;
-      ["浏览器用户标识"]	= "默认" ;
-      ["启用进度条"]	= true ;
-      } ;
   ["events"]	= {
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
 \
 --接收参数\
-浏览器对象，新标题=..." ;
+浏览器对象,网页链接=..." ;
       ["程序启动"]	= "import 'android.webkit.WebView'\
 webView.addJavascriptInterface({},'JsInterface')\
 menuBtn.onClick=function()\
   加载Js([[document.getElementsByClassName(\"navbar-toggle nav-link navbar-right\")[0].click();]])\
 end" ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
 \
 --接收参数\
-浏览器对象,网页链接=..." ;
+浏览器对象，新标题=..." ;
       ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
       } ;
-  ["sidebar"]	= {
-      ["items"]	= {
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      } ;
+  ["toolbar"]	= {
+      ["搜索URL"]	= "" ;
+      ["icon_btns"]	= {
+          [1]	= {
+              ["icon"]	= "home" ;
+              ["onClick"]	= "进入子页面(\"home\")\
+退出页面()" ;
+              } ;
           } ;
-      ["启用顶部图片"]	= false ;
-      ["启用"]	= true ;
+      ["输入栏模式"]	= true ;
+      ["搜索框提示"]	= "" ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "刷新网页()" ;
+              ["name"]	= "刷新" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "import \"android.content.Intent\"\
+import \"android.net.Uri\"\
+url=(webView.getUrl())\
+viewIntent = Intent(\"android.intent.action.VIEW\",Uri.parse(url))\
+activity.startActivity(viewIntent)" ;
+              ["name"]	= "使用浏览器打开" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "退出程序()\
+退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          } ;
+      ["启用搜索功能"]	= false ;
+      } ;
+  ["switch"]	= {
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["横屏"]	= false ;
+      } ;
+  ["view_attribute"]	= {
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["顶栏高度"]	= "55dp" ;
+      ["顶栏标题"]	= "ArkStory" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "0dp" ;
       } ;
   } ;

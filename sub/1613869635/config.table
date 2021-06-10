@@ -1,9 +1,13 @@
 {
+  ["web"]	= {
+      ["启用长按菜单"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["支持打开外部应用"]	= true ;
+      ["启动网页"]	= "https://www.bigfun.cn/tools/aktools/" ;
+      ["网页沉浸"]	= false ;
+      ["启用进度条"]	= true ;
+      } ;
   ["toolbar"]	= {
-      ["搜索框提示"]	= "" ;
-      ["启用搜索功能"]	= false ;
-      ["输入栏模式"]	= true ;
-      ["搜索URL"]	= "" ;
       ["icon_btns"]	= {
           [2]	= {
               ["icon"]	= "theme_light_dark" ;
@@ -15,86 +19,90 @@
 退出页面()" ;
               } ;
           } ;
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["搜索框提示"]	= "" ;
+      ["搜索URL"]	= "" ;
       ["menus"]	= {
-          [1]	= {
-              ["name"]	= "刷新" ;
-              ["onClick"]	= "刷新网页()" ;
-              } ;
-          [2]	= {
-              ["name"]	= "设置" ;
-              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[3].click();]])" ;
-              } ;
-          [3]	= {
-              ["name"]	= "退出" ;
+          [4]	= {
               ["onClick"]	= "退出程序()\
 退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          [1]	= {
+              ["onClick"]	= "刷新网页()" ;
+              ["name"]	= "刷新" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "import \"android.content.Intent\"\
+import \"android.net.Uri\"\
+url=(webView.getUrl())\
+viewIntent = Intent(\"android.intent.action.VIEW\",Uri.parse(url))\
+activity.startActivity(viewIntent)" ;
+              ["name"]	= "使用浏览器打开" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[3].click();]])" ;
+              ["name"]	= "设置" ;
               } ;
           } ;
       } ;
+  ["colors"]	= {
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff101f30" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["进度条"]	= "#ffee4866" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      } ;
   ["fltBtn"]	= {
       ["图标"]	= "" ;
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
       ["显示"]	= false ;
-      } ;
-  ["colors"]	= {
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["顶栏"]	= "#ff101f30" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["悬浮按钮"]	= "#ff33a7aa" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["进度条"]	= "#ffee4866" ;
-      } ;
-  ["switch"]	= {
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= false ;
-      ["显示状态栏"]	= true ;
-      ["启用启动图"]	= false ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
       } ;
   ["events"]	= {
+      ["收到新标题"]	= "" ;
+      ["网页即将加载"]	= "" ;
+      ["网页加载完毕"]	= "" ;
       ["程序启动"]	= "import 'android.webkit.WebView'\
 webView.addJavascriptInterface({},'JsInterface')\
 menuBtn.onClick=function()\
   加载Js([[document.getElementsByClassName(\"material-icons mdc-toolbar__icon\")[0].click();]])\
 end" ;
-      ["收到新标题"]	= "" ;
-      ["网页加载完毕"]	= "" ;
-      ["网页即将加载"]	= "" ;
       } ;
-  ["view_attribute"]	= {
-      ["顶栏高度"]	= "55dp" ;
-      ["侧滑栏宽度"]	= "0dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏标题"]	= "明日方舟工具箱" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      } ;
-  ["sidebar"]	= {
-      ["启用"]	= true ;
-      ["启用顶部图片"]	= false ;
-      ["items"]	= {
-          } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["支持滑动页面"]	= false ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= true ;
       } ;
   ["web_control"]	= {
       [1]	= {
-          ["js"]	= "document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[5].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[6].setAttribute(\"style\",\"display:none\");" ;
           ["remove_element"]	= "mdc-toolbar mdc-toolbar--flexible-space-maximized" ;
+          ["js"]	= "document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[5].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"mdc-list-item mdc-ripple-upgraded\")[6].setAttribute(\"style\",\"display:none\");" ;
           ["url"]	= "www.bigfun.cn" ;
           } ;
       } ;
-  ["web"]	= {
-      ["网页沉浸"]	= false ;
-      ["启用进度条"]	= true ;
-      ["启用长按菜单"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      ["支持打开外部应用"]	= true ;
-      ["启动网页"]	= "https://www.bigfun.cn/tools/aktools/" ;
+  ["view_attribute"]	= {
+      ["顶栏高度"]	= "55dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏标题"]	= "明日方舟工具箱" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "0dp" ;
+      } ;
+  ["sidebar"]	= {
+      ["items"]	= {
+          } ;
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= true ;
       } ;
   } ;

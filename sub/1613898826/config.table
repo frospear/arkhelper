@@ -1,71 +1,44 @@
 {
-  ["switch"]	= {
-      ["启用启动图"]	= false ;
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= true ;
-      ["显示状态栏"]	= true ;
+  ["web"]	= {
+      ["启用进度条"]	= true ;
+      ["网页沉浸"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["启动网页"]	= "https://ark-nights.com" ;
+      ["支持打开外部应用"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      } ;
+  ["colors"]	= {
+      ["进度条"]	= "#ffee4866" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["悬浮按钮"]	= "#ffee4866" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff2c2e43" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
       } ;
   ["view_attribute"]	= {
       ["侧滑栏宽度"]	= "0dp" ;
-      ["顶栏高度"]	= "0dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
       ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏标题"]	= "Title" ;
       ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["顶栏高度"]	= "0dp" ;
+      ["顶栏标题"]	= "Title" ;
       } ;
-  ["colors"]	= {
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["进度条"]	= "#ffee4866" ;
-      ["顶栏"]	= "#ff2c2e43" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["侧滑栏背景"]	= "#ffffffff" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["顶栏部件触摸"]	= "#22ffffff" ;
-      ["悬浮按钮"]	= "#ffee4866" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      } ;
-  ["web"]	= {
-      ["浏览器用户标识"]	= "默认" ;
-      ["启用长按菜单"]	= true ;
-      ["网页沉浸"]	= true ;
-      ["支持打开外部应用"]	= true ;
-      ["启动网页"]	= "https://ark-nights.com" ;
-      ["启用进度条"]	= true ;
-      } ;
-  ["events"]	= {
-      ["程序启动"]	= "import 'android.webkit.WebView'\
-webView.addJavascriptInterface({},'JsInterface')" ;
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象，新标题=..." ;
-      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      } ;
-  ["toolbar"]	= {
-      ["输入栏模式"]	= true ;
-      ["icon_btns"]	= {
-          } ;
-      ["menus"]	= {
-          } ;
-      ["搜索URL"]	= "" ;
-      ["搜索框提示"]	= "" ;
-      ["启用搜索功能"]	= false ;
-      } ;
-  ["web_control"]	= {
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["支持滑动页面"]	= true ;
       } ;
   ["fltBtn"]	= {
+      ["图标"]	= "" ;
       ["显示"]	= true ;
       ["点击事件"]	= "pop=PopupMenu(activity,fltBtn)\
 menu=pop.Menu\
@@ -76,17 +49,51 @@ end\
 menu.add(\"刷新\").onMenuItemClick=function(a)\
   刷新网页()\
 end\
+menu.add(\"使用浏览器打开\").onMenuItemClick=function(a)\
+  import \"android.content.Intent\"\
+  import \"android.net.Uri\"\
+  url=(webView.getUrl())\
+  viewIntent = Intent(\"android.intent.action.VIEW\",Uri.parse(url))\
+  activity.startActivity(viewIntent)\
+end\
 menu.add(\"退出\").onMenuItemClick=function(a)\
   退出程序()\
   退出页面()\
 end\
 pop.show()" ;
-      ["图标"]	= "" ;
+      } ;
+  ["web_control"]	= {
       } ;
   ["sidebar"]	= {
       ["items"]	= {
           } ;
       ["启用"]	= true ;
       ["启用顶部图片"]	= false ;
+      } ;
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "import 'android.webkit.WebView'\
+webView.addJavascriptInterface({},'JsInterface')" ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      } ;
+  ["toolbar"]	= {
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["搜索框提示"]	= "" ;
+      ["搜索URL"]	= "" ;
+      ["icon_btns"]	= {
+          } ;
+      ["menus"]	= {
+          } ;
       } ;
   } ;

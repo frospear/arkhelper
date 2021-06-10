@@ -1,2 +1,2 @@
-template="tool"
 name="akonegraph"
+template="tool"
