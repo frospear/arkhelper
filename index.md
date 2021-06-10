@@ -4,6 +4,16 @@ Didn't write anything because i can't think of it......
 
 ## Release Notes
 
+### v0.4.5
+
+- Remove invalid website.
+- New tool site included.
+- Updated information in some pages.
+- Fixed the problem of some buttons malfunctioning.
+- Fix the problem that some webpages are displayed incorrectly.
+- Add "Open in browser" menu item.
+- Fix the problem that the application icon is too small in some models (possibly).
+
 ### v0.3.1
 
 - Remove invalid website.
