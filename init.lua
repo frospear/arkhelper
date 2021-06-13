@@ -1,3 +1,4 @@
+packagename="com.oblisetta.arkhelper"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
   [2]	= "ACCESS_FINE_LOCATION" ;
@@ -6,10 +7,9 @@ user_permission={
   [5]	= "INTERNET" ;
   [6]	= "WRITE_EXTERNAL_STORAGE" ;
   } ;
-appcode="210610"
-appname="Arkhelper"
+appcode="210613"
 template="tool"
-packagename="com.oblisetta.arkhelper"
-appver="0.4.5"
+appver="0.4.6"
+appname="Arkhelper"
 
 --require "import" import"loadlayout" import"loadmenu" import"loadbitmap" 
