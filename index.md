@@ -4,6 +4,10 @@ Didn't write anything because i can't think of it......
 
 ## Release Notes
 
+### v0.4.6
+
+- Fixed the problem that the startup page color is abnormal on some models when the adaptive dark mode is turned on.
+
 ### v0.4.5
 
 - Remove invalid website.
